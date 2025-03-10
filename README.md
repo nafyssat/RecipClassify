@@ -1,11 +1,4 @@
 # RecipClassify
-## Pitch
-
-### Retour vers le passé
-
-Vous participez à la compétition DEFT2013 qui à lieu lors de la conférence nationale du domaine: la conférence TALN. La description de la compétition est disponible à l'adresse ci-dessus, il s'agit de travailler avec des données d'un domaine de spécialité, les recettes de cuisine. L'objectif de la tâche à effectué est de trouver automatiquement en fonction du titre et des instructions d'une recette s'il s'agit d'un Plat principal, une Entrée ou bien un Dessert. Vous avez à votre disposition un corpus de recettes de cuisines séparé en ensemble d'entrainement et de test.
-
-/!\ Le corpus de test ne doit être utilisé que pour évaluer vos approches. Ne l'utilisez pas pour développer vos approches !
 
 ## Travail à effectuer
 
@@ -18,3 +11,83 @@ Vous participez à la compétition DEFT2013 qui à lieu lors de la conférence n
  * Par exemple, prédire de manière aléatoire, prédire toujours la classe majoritaire, ...
 - Mettre en place 3 ou 4 méthodes différentes pour résoudre la tâche
 - Analysez vos résultats pour comprendre les prédictions de vos approches (choisissez par exemple seulement la meilleure et la moins bonne)
+
+# DEFT2013 Tâche 2 : SONY (optionnel)
+
+OULBOUB Safaa - NAFYSSATA Mohamed
+
+
+
+## Description de la tâche
+
+
+
+	1 ou 2 exemples de documents (avec leur identifiant)
+
+
+
+## Statistiques corpus
+
+
+
+	Nombre de document de train/dev/test
+
+	Répartition des étiquettes dans chacun des sous-ensemble
+
+
+
+## Méthodes proposées
+
+
+
+### Run1: baseline (méthode de référence)
+
+
+
+	Description de la méthode:
+
+	- descripteurs utilisés
+
+	- classifieur utilisé
+
+
+
+### Run2: NOMMETHODE
+
+### Run3: NOMMETHODE
+
+### Run4: NOMMETHODE (pour aller plus loin)
+
+
+
+## Résultats
+
+
+
+| Run      | f1 Score |
+
+| -------- | --------:|
+
+| baseline |  15,2 |
+
+| METH 2   |   6,8 |
+
+| METH 3   |  50,8 |
+
+| METH 4   |  70,2 |
+
+
+
+### Analyse de résultats
+
+	
+
+	Pistes d'analyse:
+
+	* Combien de documents ont un score de 0 ? de 0.5 ? de 1 ? (Courbe ROC)
+
+	* Y-a-t-il des régularités dans les document bien/mal classifiés ?
+
+	* Où est-ce que l'approche se trompe ? (matrice de confusion)
+
+	* Si votre méthode le permet: quels sont les descripteurs les plus décisifs ?
