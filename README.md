@@ -52,11 +52,11 @@ OULBOUB Safaa - NAFYSSATA Mohamed
 
 
 
-### Run2: NOMMETHODE
+### Run2: IDF-TF 
 
-### Run3: NOMMETHODE
+### Run3: RNN - Word2vec
 
-### Run4: NOMMETHODE (pour aller plus loin)
+### Run4: 
 
 
 
@@ -70,9 +70,9 @@ OULBOUB Safaa - NAFYSSATA Mohamed
 
 | baseline |  15,2 |
 
-| METH 2   |   6,8 |
+| IDF-TF   |   6,8 |
 
-| METH 3   |  50,8 |
+| RNN   |  50,8 |
 
 | METH 4   |  70,2 |
 
