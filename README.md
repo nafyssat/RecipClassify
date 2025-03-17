@@ -76,9 +76,37 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 - **Précision obtenue** : **46,4%**  
 - **Explication** : En classant toutes les recettes dans **la catégorie majoritaire**, on obtient une précision de **46,4%**, mais sans aucune compréhension du texte.  
 
-### Run2: IDF-TF + SVM 
+###  **Run 2: TF-IDF + SVM**
 
-### Run3: RNN - Word2vec
+ **Descripteurs utilisés**  
+- **TF-IDF (Term Frequency - Inverse Document Frequency)**
+- **Suppression des stopwords avec spaCy**
+- **Lemmatisation des mots**
+- **N-grammes (unigrammes + bigrammes)**
+
+ **Classifieur utilisé**  
+- **SVM (Support Vector Machine) avec noyau linéaire**
+- **Gestion des classes déséquilibrées avec `class_weight='balanced'`**
+
+ **Résultats obtenus**  
+| Classe           | Precision | Recall | F1-score | Support |
+|-----------------|-----------|--------|----------|---------|
+| **Dessert**     | 0.99      | 1.00   | 0.99     | 407     |
+| **Entrée**      | 0.70      | 0.84   | 0.77     | 337     |
+| **Plat principal** | 0.91  | 0.82   | 0.86     | 644     |
+| **Moyenne (accuracy)** | **0.87** | **0.88** | **0.87** | **1388** |
+
+ **Comparaison avec la baseline**  
+| Méthode            | Accuracy (%) | F1-Score (%) | Observations |
+|--------------------|-------------|-------------|--------------|
+| **Baseline (Classe Majoritaire)** | 46.4 | ~40-50 | Ne prend pas en compte le texte |
+| **TF-IDF + SVM** | **87.3** | **87.0** | Forte amélioration grâce à la vectorisation TF-IDF |
+
+ **Conclusion**  
+- **Amélioration significative** par rapport à la baseline.  
+- **Les classes "Entrée" et "Plat principal" sont plus difficiles à séparer**.  
+
+### Run3: LSTM - Word2vec
 
 ### Run4: 
 
