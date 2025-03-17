@@ -26,10 +26,14 @@ L'objectif est de classifier automatiquement des recettes de cuisine en trois ca
 ## Extrait du fichier de données
 
 Voici un exemple de structure du fichier contenant les recettes de cuisine :
-```csv
+# Extrait du fichier de données
+
+Structure du fichier CSV (pour les sauts de ligne dans les cellules, utiliser `\\n` ou `<br>`) :
+
+````csv
 doc_id,titre,type,difficulte,cout,ingredients,recette
-recette_221358.xml,"Feuilleté de saumon et de poireau, sauce aux crevettes",Plat principal,Facile,Moyen,"- 1 gros pavé de saumon<br>- 100 g de crevettes décortiquées<br>- 2 poireaux moyens","Couper finement le blanc de poireaux...<br>Faire revenir dans l'huile..."
-recette_48656.xml,"Cake poulet/moutarde/amandes",Entrée,Très facile,Bon marché,"- 3 œufs<br>- 150 g de farine<br>- 1 sachet de levure","Préchauffer le four...<br>Mélanger les ingrédients..."
+recette_221358.xml,"Feuilleté de saumon et de poireau, sauce aux crevettes",Plat principal,Facile,Moyen,"- 1 saumon<br>- 100g crevettes","1. Couper les poireaux...<br>2. Faire revenir..."
+recette_48656.xml,"Cake poulet/moutarde/amandes",Entrée,Très facile,Bon marché,"- 3 œufs<br>- 150g farine","1. Préchauffer le four...<br>2. Mélanger..."
 
 ## Statistiques corpus
 ###  Nombre de documents dans chaque ensemble (train/dev/test) :
