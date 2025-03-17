@@ -60,22 +60,23 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 
 
 ## Méthodes proposées
+###  **Run 1: Baseline (Classe Majoritaire)**
 
+**Descripteurs utilisés**  
+- Aucun descripteur NLP.  
+- La seule information utilisée est **la fréquence des classes** dans `train.csv`.
+ - On prédit cette classe **pour toutes les recettes** de `test.csv`, sans analyser le texte. 
+- On prédit uniquement **la classe majoritaire** sans analyser le texte.
 
+ **Classifieur utilisé**  
+- **Règle conditionnelle** : prédire systématiquement **la classe majoritaire** du jeu de train.  
+- Il ne s'agit pas d'un modèle de Machine Learning, mais d'une **référence triviale**.
+- 
+ **Résultat obtenu**  
+- **Précision obtenue** : **46,4%**  
+- **Explication** : En classant toutes les recettes dans **la catégorie majoritaire**, on obtient une précision de **46,4%**, mais sans aucune compréhension du texte.  
 
-### Run1: baseline (méthode de référence)
-
-
-
-	Description de la méthode:
-
-	- descripteurs utilisés
-
-	- classifieur utilisé
-
-
-
-### Run2: IDF-TF 
+### Run2: IDF-TF + SVM 
 
 ### Run3: RNN - Word2vec
 
