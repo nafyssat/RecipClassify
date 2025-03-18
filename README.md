@@ -1,16 +1,3 @@
-# RecipClassify
-
-## Travail à effectuer
-
-- Prendre en main les données
-- Analyser l'ensemble d'entraînement
-  * Attention, le fichier de test, lui, ne doit être conservé que pour l'évaluation de vos approches !
-- Lire l'article de présentation de la compétition
- * Vous pouvez aussi regarder ce qu'on fait les participant·es dans l'onglet "Actes"
-- Mettre en place une baseline (méthode de référence simple à laquelle vous comparer)
- * Par exemple, prédire de manière aléatoire, prédire toujours la classe majoritaire, ...
-- Mettre en place 3 ou 4 méthodes différentes pour résoudre la tâche
-- Analysez vos résultats pour comprendre les prédictions de vos approches (choisissez par exemple seulement la meilleure et la moins bonne)
 
 # DEFT2013 Tâche 2 : SONY (optionnel)
 
@@ -124,7 +111,32 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
  **Le modèle fonctionne très bien pour classer les `Desserts` (96% de F1-score).**  
  **Les `Plats principaux` sont bien reconnus (85% de F1-score).**  
  **Le modèle confond parfois les `Entrées` avec les plats principaux (67% de F1-score).**  
-### Run4: BERT 
+### **Run:4 Camembert + BertClassifier**
+
+**Descripteurs utilisés**  
+- **Camembert (pré-entraîné sur des textes français)**
+- **Tokenization avec CamembertTokenizer**
+- **Prétraitement des textes (fusion de titres, ingrédients, recettes)**
+- **Encodage des textes en `input_ids` et `attention_mask`**
+
+**Classifieur utilisé**  
+- **BertClassifier basé sur Camembert**
+  - Utilisation des embeddings générés par Camembert comme entrée pour un classificateur linéaire
+  - **Gestion des classes déséquilibrées** avec un poids inversé (`class_weight`)
+
+**Résultats obtenus**  
+| Classe           | Precision | Recall | F1-score | Support |
+|-----------------|-----------|--------|----------|---------|
+| **Dessert**     | 0.99      | 0.99   | 0.99     | 407     |
+| **Entrée**      | 0.70      | 0.78   | 0.74     | 337     |
+| **Plat principal** | 0.88  | 0.83   | 0.85     | 644     |
+| **Moyenne (accuracy)** | **0.86** | **0.86** | **0.86** | **1388** |
+
+**Conclusion**  
+- **Le modèle BertClassifier utilisant Camembert** donne des résultats impressionnants, surtout pour les catégories comme **Dessert**, où il atteint un **f1-score de 0.99**.  
+- **La précision pour Entrée** (0.70) peut être améliorée, mais le modèle montre de **bons résultats sur le plat principal** (0.85).  
+- **Performance globale solide** avec une **accuracy de 86%**.  
+
 
 
 
@@ -136,7 +148,7 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
 | **Baseline (Classe Majoritaire)** | **46**  |
 | **TF-IDF + SVM**  | **87.0**|
 | **LSTM + word2vec**   |  **84** |
-| **BERT**  |  **85** |
+| **BERT**  |  **86** |
 
 ### Analyse de résultats
 
