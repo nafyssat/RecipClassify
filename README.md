@@ -82,7 +82,7 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 - **TF-IDF (Term Frequency - Inverse Document Frequency)**
 - **Suppression des stopwords avec spaCy**
 - **Lemmatisation des mots**
-- **N-grammes (unigrammes + bigrammes)**
+- **N-grammes**
 
  **Classifieur utilisé**  
 - **SVM (Support Vector Machine) avec noyau linéaire**
