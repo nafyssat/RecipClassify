@@ -111,7 +111,7 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
  **Le modèle fonctionne très bien pour classer les `Desserts` (96% de F1-score).**  
  **Les `Plats principaux` sont bien reconnus (85% de F1-score).**  
  **Le modèle confond parfois les `Entrées` avec les plats principaux (67% de F1-score).**  
-### **Run:4 Camembert + BertClassifier**
+### **Run:4 CamemBERT**
 
 **Descripteurs utilisés**  
 - **Camembert (pré-entraîné sur des textes français)**
