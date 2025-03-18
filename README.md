@@ -66,7 +66,8 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 ###  **Run 2: TF-IDF + SVM**
 
  **Descripteurs utilisés**  
-- **TF-IDF (Term Frequency - Inverse Document Frequency)**
+- - **TF-IDF (Term Frequency - Inverse Document Frequency)**  
+  - Entraîné sur **l’ensemble du corpus (train + test)** afin d’éviter la présence de mots inconnus dans l’ensemble de test, garantissant ainsi une meilleure stabilité des représentations textuelles.  
 - **Suppression des stopwords avec spaCy**
 - **Lemmatisation des mots**
 - **N-grammes**
@@ -83,9 +84,13 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 | **Plat principal** | 0.91  | 0.82   | 0.86     | 644     |
 | **Moyenne (accuracy)** | **0.87** | **0.88** | **0.87** | **1388** |
 
- **Conclusion**  
-- **Amélioration significative** par rapport à la baseline.  
-- **Les classes "Entrée" et "Plat principal" sont plus difficiles à séparer**.  
+ **Conclusion** 
+- **Amélioration significative** par rapport à la baseline. 
+- **Les desserts sont classifiés avec une très haute précision (F1-score = 0.99)**, ce qui signifie que le modèle reconnaît facilement cette catégorie.  
+- **Les entrées sont plus difficiles à classifier (F1-score = 0.77)**, probablement en raison de leur similarité avec les plats principaux.  
+- **Les plats principaux obtiennent un bon score (F1-score = 0.86)**, mais des confusions persistent avec les entrées.  
+- **Le score global de 87% indique une bonne performance** du modèle sur l’ensemble du corpus.  
+
 
 ### Run3: LSTM - Word2vec
 Nous avons entraîné un **modèle LSTM** utilisant les **embeddings Word2Vec** pour classifier les recettes en **Entrée, Plat principal ou Dessert**.
@@ -135,10 +140,8 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
 **Conclusion**  
 - **Le modèle BertClassifier utilisant Camembert** donne des résultats impressionnants, surtout pour les catégories comme **Dessert**, où il atteint un **f1-score de 0.99**.  
 - **La précision pour Entrée** (0.70) peut être améliorée, mais le modèle montre de **bons résultats sur le plat principal** (0.85).  
-- **Performance globale solide** avec une **accuracy de 86%**.  
-
-
-
+- **Performance globale solide** avec une **accuracy de 86%**.
+- **Aucune augmentation de données n’a été effectuée**, mais il est possible que l’augmentation de données puisse aider à améliorer le F1-score, notamment pour la classe **Entrée**.  
 
 ## Résultats
 
