@@ -108,7 +108,7 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 
 ### Run3: LSTM - Word2vec
 
-### Run4: 
+### Run4: BERT - 
 
 
 
@@ -126,7 +126,7 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 
 | RNN   |  50,8 |
 
-| METH 4   |  70,2 |
+|BERT  |  85 |
 
 
 
