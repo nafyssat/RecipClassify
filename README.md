@@ -71,7 +71,7 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
  **Classifieur utilisé**  
 - **Règle conditionnelle** : prédire systématiquement **la classe majoritaire** du jeu de train.  
 - Il ne s'agit pas d'un modèle de Machine Learning, mais d'une **référence triviale**.
-- 
+
  **Résultat obtenu**  
 - **Précision obtenue** : **46,4%**  
 - **Explication** : En classant toutes les recettes dans **la catégorie majoritaire**, on obtient une précision de **46,4%**, mais sans aucune compréhension du texte.  
@@ -96,39 +96,25 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 | **Plat principal** | 0.91  | 0.82   | 0.86     | 644     |
 | **Moyenne (accuracy)** | **0.87** | **0.88** | **0.87** | **1388** |
 
- **Comparaison avec la baseline**  
-| Méthode            | Accuracy (%) | F1-Score (%) | Observations |
-|--------------------|-------------|-------------|--------------|
-| **Baseline (Classe Majoritaire)** | 46.4 | ~40-50 | Ne prend pas en compte le texte |
-| **TF-IDF + SVM** | **87.3** | **87.0** | Forte amélioration grâce à la vectorisation TF-IDF |
-
  **Conclusion**  
 - **Amélioration significative** par rapport à la baseline.  
 - **Les classes "Entrée" et "Plat principal" sont plus difficiles à séparer**.  
 
 ### Run3: LSTM - Word2vec
 
-### Run4: BERT - 
+### Run4: BERT 
 
 
 
 ## Résultats
 
-
-
-| Run      | f1 Score |
-
-| -------- | --------:|
-
-| baseline |  15,2 |
-
-| IDF-TF   |   6,8 |
-
-| RNN   |  50,8 |
-
-|BERT  |  85 |
-
-
+**Comparaison avec la baseline**  
+| Méthode            | F1-Score (%) |
+|--------------------|--------------|
+| **Baseline (Classe Majoritaire)** | ~40-50  |
+| **TF-IDF + SVM**  | **87.0**|
+| **LSTM + word2vec**   |  **** |
+| **BERT**  |  **85** |
 
 ### Analyse de résultats
 
