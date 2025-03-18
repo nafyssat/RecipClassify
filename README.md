@@ -101,7 +101,29 @@ Voici la distribution des catégories (`Entrée`, `Plat principal`, `Dessert`) d
 - **Les classes "Entrée" et "Plat principal" sont plus difficiles à séparer**.  
 
 ### Run3: LSTM - Word2vec
+Nous avons entraîné un **modèle LSTM** utilisant les **embeddings Word2Vec** pour classifier les recettes en **Entrée, Plat principal ou Dessert**.
 
+####  **Entraînement du modèle**
+Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 dimensions, puis nous avons construit un modèle **LSTM** avec la structure suivante :
+-  **Couche d'Embedding Word2Vec** (300 dimensions).
+-  **LSTM avec 128 unités** pour capturer les relations locales entre les mots.
+-  **Dropout (0.5)** pour éviter le surapprentissage.
+-  **Deuxième LSTM avec 64 unités** pour capturer les relations globales.
+-  **Dense (32 unités, activation ReLU)** pour l’apprentissage des représentations.
+-  **Softmax** pour classifier en `Entrée`, `Plat principal` ou `Dessert`.
+
+####  **Résultats obtenus**
+| **Classe**          | **Précision** | **Recall** | **F1-score** | **Support** |
+|---------------------|--------------|------------|--------------|------------|
+| **Dessert**        | 0.93         | 0.99       | 0.96         | 407        |
+| **Entrée**         | 0.73         | 0.61       | 0.67         | 337        |
+| **Plat principal** | 0.83         | 0.87       | 0.85         | 644        |
+| **Moyenne (accuracy)** | **0.84**  | **0.82**   | **0.82**     | **1388**  |
+
+####  **Analyse des résultats**
+ **Le modèle fonctionne très bien pour classer les `Desserts` (96% de F1-score).**  
+ **Les `Plats principaux` sont bien reconnus (85% de F1-score).**  
+ **Le modèle confond parfois les `Entrées` avec les plats principaux (67% de F1-score).**  
 ### Run4: BERT 
 
 
