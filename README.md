@@ -135,7 +135,7 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
 |--------------------|--------------|
 | **Baseline (Classe Majoritaire)** | ~40-50  |
 | **TF-IDF + SVM**  | **87.0**|
-| **LSTM + word2vec**   |  **** |
+| **LSTM + word2vec**   |  **84** |
 | **BERT**  |  **85** |
 
 ### Analyse de résultats
