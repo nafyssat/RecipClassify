@@ -133,7 +133,7 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
 **Comparaison avec la baseline**  
 | Méthode            | F1-Score (%) |
 |--------------------|--------------|
-| **Baseline (Classe Majoritaire)** | ~40-50  |
+| **Baseline (Classe Majoritaire)** | **46**  |
 | **TF-IDF + SVM**  | **87.0**|
 | **LSTM + word2vec**   |  **84** |
 | **BERT**  |  **85** |
