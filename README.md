@@ -155,14 +155,11 @@ Nous avons utilisé **Word2Vec** pour convertir chaque mot en un vecteur de 300 
 
 ### Analyse de résultats
 
+Ce projet nous a permis d’explorer plusieurs approches pour la classification automatique des recettes de cuisine, en combinant différentes représentations textuelles et modèles de classification. Les méthodes TF-IDF + SVM et BERT (Camembert) ont montré les meilleures performances.
+
+Cependant,la methode Word2Vec a montré des limites dues à la taille du dataset, soulignant le besoin d'un plus grand volume de données pour obtenir des embeddings plus riches et mieux adaptés à la tâche. 
+
+Pour des travaux futurs, il serait intéressant d’étudier l’impact de l’augmentation des données, notamment via des techniques de data augmentation textuelle ou en enrichissant le dataset avec des recettes issues d'autres sources. De plus, tester des approches hybrides combinant TF-IDF et embeddings neuronaux pourrait permettre d’exploiter les forces de chaque méthode pour une classification encore plus robuste.
 	
 
-	Pistes d'analyse:
-
-	* Combien de documents ont un score de 0 ? de 0.5 ? de 1 ? (Courbe ROC)
-
-	* Y-a-t-il des régularités dans les document bien/mal classifiés ?
-
-	* Où est-ce que l'approche se trompe ? (matrice de confusion)
-
-	* Si votre méthode le permet: quels sont les descripteurs les plus décisifs ?
+	
